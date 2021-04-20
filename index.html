@@ -122,7 +122,7 @@
           var isAnonymous = user.isAnonymous;
           var uid = user.uid;
           var providerData = user.providerData;
-          document.getElementById('quickstart-sign-in-status').textContent = 'Signed in as'+user;
+          document.getElementById('quickstart-sign-in-status').textContent = 'Signed in as'+user.value;
           document.getElementById('quickstart-sign-in').textContent = 'Sign out';
         } 
       });
