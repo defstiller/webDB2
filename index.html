@@ -104,15 +104,13 @@
       });
     }
       //Email Verification
-      setTimeout(function sendEmailVerification(user) {
+      function sendEmailVerification(user) {
       console.log("hello")
       firebase.auth().currentUser.sendEmailVerification().then(function() {
       // Email Verification sent!
       alert('Email Verification Sent!');
-      })
+      }) }
 
-    } ,2000)
-    
     function initApp() {
       // Listening for auth state changes.
       firebase.auth().onAuthStateChanged(function(user) {
