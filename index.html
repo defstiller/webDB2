@@ -59,7 +59,7 @@
     }
 
     // Sign Up Handler
-    function handleSignUp() {
+    function handleSignUp(sendPasswordReset) {
       var email = document.getElementById('email').value;
       var password = document.getElementById('password').value;
       if (email.length < 4) {
@@ -138,7 +138,6 @@
       document.getElementById('password-reset').addEventListener('click', sendPasswordReset, false);
       document.getElementById("sign-up").addEventListener("click", ()=> {
         handleSignUp();
-        sendEmailVerification();
       })
     }
 
