@@ -84,13 +84,6 @@
       });
     }
 
-    //Email Verification
-      function sendEmailVerification() {
-      firebase.auth().currentUser.sendEmailVerification().then(function() {
-        // Email Verification sent!
-        alert('Email Verification Sent!');
-      })
-    }
 
     function sendPasswordReset() {
       var email = document.getElementById('email').value;
@@ -124,7 +117,15 @@
           var providerData = user.providerData;
           document.getElementById('sign-in-status').textContent = 'Signed in as '+email;
           document.getElementById('sign-in').textContent = 'Sign out';
-          console.log(emailVerified)
+          if (emailVerified=false){
+                //Email Verification
+              function sendEmailVerification() {
+              firebase.auth().currentUser.sendEmailVerification().then(function() {
+              // Email Verification sent!
+               alert('Email Verification Sent!');
+      })
+    }
+          }
         } 
         else {
           alert("please sign in or sign up (will add separate page)")
@@ -135,7 +136,6 @@
       document.getElementById('password-reset').addEventListener('click', sendPasswordReset, false);
       document.getElementById("sign-up").addEventListener("click", ()=> {
         handleSignUp();
-        sendEmailVerification();
       })
     }
 
