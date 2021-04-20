@@ -118,19 +118,22 @@
           document.getElementById('sign-in-status').textContent = 'Signed in as '+email;
           document.getElementById('sign-in').textContent = 'Sign out';
           if (emailVerified=false){
-                //Email Verification
-              function sendEmailVerification() {
-              firebase.auth().currentUser.sendEmailVerification().then(function() {
-              // Email Verification sent!
-               alert('Email Verification Sent!');
-      })
-    }
+            sendEmailVerification();
           }
         } 
         else {
           alert("please sign in or sign up (will add separate page)")
         }
       });
+
+
+      //Email Verification
+      function sendEmailVerification() {
+      firebase.auth().currentUser.sendEmailVerification().then(function() {
+      // Email Verification sent!
+      alert('Email Verification Sent!');
+      })
+    }
 
       document.getElementById('sign-in').addEventListener('click', toggleSignIn, false);
       document.getElementById('password-reset').addEventListener('click', sendPasswordReset, false);
