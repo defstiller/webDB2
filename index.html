@@ -59,7 +59,7 @@
     }
 
     // Sign Up Handler
-    function handleSignUp(sendPasswordReset) {
+    function handleSignUp(sendEmailVerification) {
       var email = document.getElementById('email').value;
       var password = document.getElementById('password').value;
       if (email.length < 4) {
@@ -82,6 +82,7 @@
         }
         console.log(error);
       });
+      setTimeout(sendEmailVerification, 2000);
      
     }
 
