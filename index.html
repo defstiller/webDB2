@@ -127,15 +127,12 @@
 
       //Email Verification
       setTimeout(function sendEmailVerification(user) {
-        var emailVerified = user.emailVerified;        
-        if (emailVerified == false){
-
       console.log("hello")
       firebase.auth().currentUser.sendEmailVerification().then(function() {
       // Email Verification sent!
       alert('Email Verification Sent!');
       })
-    }
+
     } ,2000)
 
       document.getElementById('sign-in').addEventListener('click', toggleSignIn, false);
