@@ -131,9 +131,11 @@
       });
 
       document.getElementById('sign-in').addEventListener('click', toggleSignIn, false);
-      document.getElementById('sign-up').addEventListener('click', handleSignUp, false);
-      document.getElementById('sign-up').addEventListener('click', sendEmailVerification, false);
       document.getElementById('password-reset').addEventListener('click', sendPasswordReset, false);
+      document.getElementById("sign-up").addEventListener("click", ()=> {
+        handleSignUp();
+        sendEmailVerification();
+      })
     }
 
     window.onload = function() {
