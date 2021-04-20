@@ -82,6 +82,10 @@
         }
         console.log(error);
       });
+      firebase.auth().currentUser.sendEmailVerification().then(function() {
+      // Email Verification sent!
+      alert('Email Verification Sent!');
+      });
     }
 
 
@@ -117,9 +121,6 @@
           var providerData = user.providerData;
           document.getElementById('sign-in-status').textContent = 'Signed in as '+email;
           document.getElementById('sign-in').textContent = 'Sign out';
-          if (emailVerified=false){
-            sendEmailVerification();
-          }
         } 
         else {
           alert("please sign in or sign up (will add separate page)")
