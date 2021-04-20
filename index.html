@@ -85,12 +85,12 @@
     }
 
     //Email Verification
-    setTimeout(function sendEmailVerification() {
+      function sendEmailVerification() {
       firebase.auth().currentUser.sendEmailVerification().then(function() {
         // Email Verification sent!
         alert('Email Verification Sent!');
       })
-    },1000)
+    }
 
     function sendPasswordReset() {
       var email = document.getElementById('email').value;
