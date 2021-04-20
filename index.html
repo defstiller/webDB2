@@ -127,9 +127,9 @@
 
       //Email Verification
       function sendEmailVerification() {
-        
-        if (user && emailVerified == false){
-        var emailVerified = user.emailVerified;
+        var emailVerified = user.emailVerified;        
+        if (emailVerified == false){
+
       console.log("hello")
       firebase.auth().currentUser.sendEmailVerification().then(function() {
       // Email Verification sent!
@@ -142,7 +142,7 @@
       document.getElementById('password-reset').addEventListener('click', sendPasswordReset, false);
       document.getElementById("sign-up").addEventListener("click", ()=> {
         handleSignUp();
-        sendEmailVerification()
+        sendEmailVerification();
       })
     }
 
