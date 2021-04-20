@@ -59,7 +59,7 @@
     }
 
     // Sign Up Handler
-    function handleSignUp(sendEmailVerification) {
+    function handleSignUp() {
       var email = document.getElementById('email').value;
       var password = document.getElementById('password').value;
       if (email.length < 4) {
@@ -105,12 +105,12 @@
       });
     }
       //Email Verification
-      function sendEmailVerification(user) {
+      function sendEmailVerification() {
       console.log("hello")
       firebase.auth().currentUser.sendEmailVerification().then(function() {
       // Email Verification sent!
       alert('Email Verification Sent!');
-      }) }
+      }) };
 
     function initApp() {
       // Listening for auth state changes.
