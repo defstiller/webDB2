@@ -52,10 +52,10 @@
             alert(errorMessage);
           }
           console.log(error);
-          document.getElementById('quickstart-sign-in').disabled = false;
+          document.getElementById('sign-in').disabled = false;
         });
       }
-      document.getElementById('quickstart-sign-in').disabled = true;
+      document.getElementById('sign-in').disabled = true;
     }
 
     // Sign Up Handler
@@ -122,18 +122,18 @@
           var isAnonymous = user.isAnonymous;
           var uid = user.uid;
           var providerData = user.providerData;
-          document.getElementById('quickstart-sign-in-status').textContent = 'Signed in as '+email;
-          document.getElementById('quickstart-sign-in').textContent = 'Sign out';
+          document.getElementById('sign-in-status').textContent = 'Signed in as '+email;
+          document.getElementById('sign-in').textContent = 'Sign out';
         } 
         else {
           alert("please sign in or sign up (will add separate page)")
         }
       });
 
-      document.getElementById('quickstart-sign-in').addEventListener('click', toggleSignIn, false);
-      document.getElementById('quickstart-sign-up').addEventListener('click', handleSignUp, false);
-      document.getElementById('quickstart-sign-up').addEventListener('click', sendEmailVerification, false);
-      document.getElementById('quickstart-password-reset').addEventListener('click', sendPasswordReset, false);
+      document.getElementById('sign-in').addEventListener('click', toggleSignIn, false);
+      document.getElementById('sign-up').addEventListener('click', handleSignUp, false);
+      document.getElementById('sign-up').addEventListener('click', sendEmailVerification, false);
+      document.getElementById('password-reset').addEventListener('click', sendPasswordReset, false);
     }
 
     window.onload = function() {
@@ -168,15 +168,15 @@
           &nbsp;&nbsp;&nbsp;
           <input style="display:inline;width:auto;" type="password" id="password" name="password" placeholder="Password"/>
           <br/><br/>
-          <button id="quickstart-sign-in" name="signin">Sign In</button>
+          <button id="sign-in" name="signin">Sign In</button>
           &nbsp;&nbsp;&nbsp;
-          <button id="quickstart-sign-up" name="signup">Sign Up</button>
+          <button id="sign-up" name="signup">Sign Up</button>
           &nbsp;&nbsp;&nbsp;
-          <button id="quickstart-password-reset" name="verify-email">Send Password Reset Email</button>
+          <button id="password-reset" name="verify-email">Send Password Reset Email</button>
 
           <!-- Container where we'll display the user details -->
           <div class="quickstart-user-details-container">
-            Firebase sign-in status: <span id="quickstart-sign-in-status">Unknown</span>
+            Firebase sign-in status: <span id="sign-in-status">Signed Out</span>
           </div>
         </div>
       </div>
