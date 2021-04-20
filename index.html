@@ -9,8 +9,8 @@
   <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
   
   <script>
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  //Firebase configuration
+ 
   var firebaseConfig = {
     apiKey: "AIzaSyDkgXHCyPAKvQcfJaPE2voE7RumKmZbTI8",
     authDomain: "db-1-b8cf9.firebaseapp.com",
@@ -43,7 +43,7 @@
         }
         // Sign in with email and pass.
         firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-          // Handle Errors here.
+          // Handle Errors
           var errorCode = error.code;
           var errorMessage = error.message;
           if (errorCode === 'auth/wrong-password') {
@@ -72,7 +72,7 @@
       }
       // Create user with email and pass.
       firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-        // Handle Errors here.
+        // Handle Errors
         var errorCode = error.code;
         var errorMessage = error.message;
         if (errorCode == 'auth/weak-password') {
@@ -110,15 +110,9 @@
       });
     }
 
-    /**
-     * initApp handles setting up UI event listeners and registering Firebase auth listeners:
-     *  - firebase.auth().onAuthStateChanged: This listener is called when the user is signed in or
-     *    out, and that is where we update the UI.
-     */
     function initApp() {
       // Listening for auth state changes.
       firebase.auth().onAuthStateChanged(function(user) {
-        document.getElementById('quickstart-verify-email').disabled = true;
         if (user) {
           // User is signed in.
           var displayName = user.displayName;
@@ -128,18 +122,9 @@
           var isAnonymous = user.isAnonymous;
           var uid = user.uid;
           var providerData = user.providerData;
-          document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
+          document.getElementById('quickstart-sign-in-status').textContent = 'Signed in as'+user;
           document.getElementById('quickstart-sign-in').textContent = 'Sign out';
-          if (!emailVerified) {
-            document.getElementById('quickstart-verify-email').disabled = false;
-          }
-        } else {
-          // User is signed out.
-          document.getElementById('quickstart-sign-in-status').textContent = 'Signed out';
-          document.getElementById('quickstart-sign-in').textContent = 'Sign in';
-          document.getElementById('quickstart-account-details').textContent = 'null';
-        }
-        document.getElementById('quickstart-sign-in').disabled = false;
+        } 
       });
 
       document.getElementById('quickstart-sign-in').addEventListener('click', toggleSignIn, false);
