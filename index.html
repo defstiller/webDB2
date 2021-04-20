@@ -127,6 +127,7 @@
 
       //Email Verification
       function sendEmailVerification() {
+        var emailVerified = user.emailVerified;
         if (user && emailVerified !== true){
       console.log("hello")
       firebase.auth().currentUser.sendEmailVerification().then(function() {
