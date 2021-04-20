@@ -82,10 +82,7 @@
         }
         console.log(error);
       });
-      firebase.auth().email.sendEmailVerification().then(function() {
-      // Email Verification sent!
-      alert('Email Verification Sent!');
-      });
+     
     }
 
 
@@ -130,10 +127,13 @@
 
       //Email Verification
       function sendEmailVerification() {
+        if (user && emailVerified !== true){
+      console.log("hello")
       firebase.auth().currentUser.sendEmailVerification().then(function() {
       // Email Verification sent!
       alert('Email Verification Sent!');
       })
+    }
     }
 
       document.getElementById('sign-in').addEventListener('click', toggleSignIn, false);
