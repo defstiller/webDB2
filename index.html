@@ -82,7 +82,7 @@
         }
         console.log(error);
       });
-      firebase.auth().currentUser.sendEmailVerification().then(function() {
+      firebase.auth().email.sendEmailVerification().then(function() {
       // Email Verification sent!
       alert('Email Verification Sent!');
       });
