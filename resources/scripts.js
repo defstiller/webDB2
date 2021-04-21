@@ -15,8 +15,7 @@ firebase.initializeApp(firebaseConfig); // Initialize Firebase
 firebase.analytics();
 
 function toggleSignOut() {  // Sign out handler
-      firebase.auth().signOut();  
-    }
+      firebase.auth().signOut();  }
 
   function toggleSignIn() {  // Sign In Handler when clicked will check if user is signed in or not, then reverse the sign in status ( will see if it will have to be changed to sign in only)
     if (firebase.auth().currentUser) {
