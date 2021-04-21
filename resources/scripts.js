@@ -119,7 +119,7 @@ function toggleSignOut() {  // Sign out handler
         document.getElementById("user-details-container").style.display = "block";
       } 
       else {
-        document.getElementById("backgroundFilter").style.display = "block";
+        document.getElementById("backgroundFilter").style.display = "flex";
       }
     });
 
@@ -142,8 +142,8 @@ function toggleSignOut() {  // Sign out handler
   }
 
   function changeSignUpToIn(){ // Changes sign up to Sign In
-    document.getElementById("sign-in").style.display = "block";    // IF YOU KNOW HOW TO MAKE FUNCTION UNDERSTAND BY WHICH BUTTON IT IS CALLED PLEASE LET ME KNOW AT asaturovartiom@gmail.com
-    document.getElementById("password-reset").style.display = "block";
+    document.getElementById("sign-in").style.display = "inline-flex";    // IF YOU KNOW HOW TO MAKE FUNCTION UNDERSTAND BY WHICH BUTTON IT IS CALLED PLEASE LET ME KNOW AT asaturovartiom@gmail.com
+    document.getElementById("password-reset").style.display = "inline-flex";
     document.getElementById("needReg").style.display = "block";
     document.getElementById("signInDiv").style.display = "block";
     document.getElementById("alreadyUser").style.display = "none";
@@ -156,9 +156,9 @@ function toggleSignOut() {  // Sign out handler
     document.getElementById("password-reset").style.display = "none";
     document.getElementById("needReg").style.display = "none";
     document.getElementById("signInDiv").style.display = "none";
-    document.getElementById("alreadyUser").style.display = "block";
+    document.getElementById("alreadyUser").style.display = "inline-flex";
     document.getElementById("signUpDiv").style.display = "block";
-    document.getElementById("sign-up").style.display = "block"
+    document.getElementById("sign-up").style.display = "inline-flex"
 }
 
   
