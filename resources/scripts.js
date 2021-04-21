@@ -15,12 +15,8 @@ firebase.initializeApp(firebaseConfig); // Initialize Firebase
 firebase.analytics();
 
 function toggleSignOut() {  // Sign out handler
-    if (firebase.auth().currentUser) {
-      firebase.auth().signOut(); }
-      else {
-          alert("You are not signed in, and if someone saw this - I better be testing better")
-          return;
-      } }
+      firebase.auth().signOut();  
+    }
 
   function toggleSignIn() {  // Sign In Handler when clicked will check if user is signed in or not, then reverse the sign in status ( will see if it will have to be changed to sign in only)
     if (firebase.auth().currentUser) {
@@ -100,7 +96,6 @@ function toggleSignOut() {  // Sign out handler
   }
 
     function sendEmailVerification() {    //Email Verification
-    console.log("hello")
     firebase.auth().currentUser.sendEmailVerification().then(function() {
     // Email Verification sent!
     alert('Email Verification Sent!')
