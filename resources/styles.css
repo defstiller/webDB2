@@ -39,8 +39,7 @@ html {
 #backgroundFilterBox { /*VISIBLE BACKGROUND FOR SIGN UP / IN */
     height: 80%;
     width: 80%;
-    background-image: url(./img/geran-de-klerk-qzgN45hseN0-unsplash.jpg);
-    background-position: center;
+    background-image: url(./img/nicolas-prieto-sMJaf08ugD0-unsplash.jpg);
     background-size: cover;
     display: flex;
     justify-content: center;
