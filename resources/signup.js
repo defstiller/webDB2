@@ -122,39 +122,39 @@ function initApp() {
       document.getElementById("signUpOrIn").style.display = "none";
       document.getElementById("user-details-container").style.display = "block";
     } 
-    else {
+    else { // "enter" key for sign in / up
+      var signIn = document.getElementById("sign-in");
+      var signUp = document.getElementById("sign-up");
       document.getElementById("backgroundFilter").style.display = "flex";
-    }
-  });
+      document.addEventListener("keypress", function (e) { 
+        if (signUp.style.display = "block" && e.key === "Enter") {
+          handleSignUp()
+        }
+        else if (signIn.style.display = "block" && e.key === "Enter") {
+          toggleSignIn()
+        }
+        else {
+          return;
+        }
+    } ) 
+  }});
 
   var signIn = document.getElementById("sign-in");
   var signUp = document.getElementById("sign-up");
-
   // Sign In / Up / Out Listeners 
   signIn.addEventListener("click", toggleSignIn, false);
   document.getElementById("password-reset").addEventListener("click", sendPasswordReset, false);
   signUp.addEventListener("click", ()=> {
     handleSignUp();
   })
-  document.addEventListener("keypress", function (e) {
-    if ( signUp.style.style ="inline-flex" && e.key === "Enter") {
-      handleSignUp()
-    }
-  });
-  document.addEventListener("keypress", function (e) {
-    if ( signIn.style.style ="inline-flex" && e.key === "Enter") {
-      handleSignIn()
-    }
-  });
-
 
   document.getElementById("sign-out").addEventListener("click", () => {toggleSignOut(), reloadPage()}); //signs user out and reloads the page
   }   // Sign In / Up / Out Listeners END
 
-
 window.onload = function() {
   initApp();
 };
+
 function reloadPage (){
     window.location.reload(); 
 }
@@ -162,7 +162,7 @@ function reloadPage (){
 function changeSignUpToIn(){ // Changes sign up to Sign In
   document.getElementById("sign-in").style.display = "inline-flex";    // IF YOU KNOW HOW TO MAKE FUNCTION UNDERSTAND BY WHICH BUTTON IT IS CALLED PLEASE LET ME KNOW AT asaturovartiom@gmail.com
   document.getElementById("password-reset").style.display = "inline-flex";
-  document.getElementById("needReg").style.display = "block";
+  document.getElementById("needReg").style.display = "inline-flex";
   document.getElementById("signInDiv").style.display = "block";
   document.getElementById("alreadyUser").style.display = "none";
   document.getElementById("signUpDiv").style.display = "none";

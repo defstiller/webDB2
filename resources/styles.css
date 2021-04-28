@@ -49,18 +49,21 @@ html {
 }
 
 
-#signInDiv, #signUpDiv {
+#signInDiv
+,#signUpDiv {
     padding: 0 2%;
     line-height: 30px;
 }
-#signInDiv h4, #signUpDiv h4 {
+#signInDiv h4
+,#signUpDiv h4 {
     font-size: 3rem;
     padding-bottom: 1%;
 }
 #signUpOrIn h4, #signUpOrIn h5, #signUpOrIn p {
     text-shadow: black 1px 1px 1px;
 }
-#inOrOutDiv button, #inOrOutDiv input{ /* Sign up / in buttons start */
+#inOrOutDiv button
+,#inOrOutDiv input{ /* Sign up / in buttons start */
     font-size: 80%;
     margin-top: 1%;
     box-shadow: -2px 2px black, -1px 1px black;
@@ -72,8 +75,5 @@ html {
     cursor: pointer;
     background-color: blanchedalmond;
 }
-#needReg {
-    margin-top: 1%;
-    margin-left: 45%;
-}                                       /* Sign up / in buttons ends */
+                                   /* Sign up / in buttons ends */
 
