@@ -17,52 +17,51 @@
 
 </head>
 <body>
-  <header>
+<header>
+  <div id="user-details-container">
+    <span id="sign-in-status">Signed Out</span>
+    <button id="sign-out" name="signout">Sign out</button>
+    <p id="safeLight"></p>
+    <p id="safeLightProfit">Loading..</p>
+    <p id="safeBTC"></p>
+    <p id="safeBTCProfit">Loading..</p>
+  </div>
+</header>
 
-  </header>
+<main>
+<div id="backgroundFilter">   <!-- Background Filter Starts-->
+    <div id="backgroundFilterBox">  
+    <div id="signUpOrIn">
 
-  <main>
-    <div id="backgroundFilter">   <!-- Background Filter Starts-->
-       <div id="backgroundFilterBox">  
-      <div id="signUpOrIn">
+    <div id="signUpDiv">
+      <h4> Sign Up</h1>           <!-- Sign up Text starts-->
+      <h5>Why bother with creating sign up / login / verification ? Because static pages are lame!</h5>
+      <p>After creating account on one of my projects, you will be automatically logged in to all of them</p>
+      <p>No need for verification at this time</p>
+    </div>
 
-        <div id="signUpDiv">
-          <h4> Sign Up</h1>           <!-- Sign up Text starts-->
-          <h5>Why bother with creating sign up / login / verification ? Because static pages are lame!</h5>
-          <p>After creating account on one of my projects, you will be automatically logged in to all of them</p>
-          <p>No need for verification at this time</p>
-        </div>
+    <div id="signInDiv">
+      <h4>Sign in</h4>
+      <h5>If you have registered / Signed in not long ago on any of my projects, and you were asked to create account please let me know at artiomasaturov@gmail.com</h5>
+    </div>
+    <div id="inOrOutDiv">          <!-- Sign up menu starts -->
+      <form>
+      <input autocomplete="on" type="text" id="email" name="email" placeholder="Email" />
+      <input autocomplete="on" type="password" id="password" name="password" placeholder="Password" />
+      </form>
+      <button id="sign-up" name="signup">Sign Up</button>
+      <button id="alreadyUser" onclick="changeSignUpToIn()">Already Registered?</button>
+      <button id="sign-in" name="signin">Sign In</button>
+      <button id="password-reset" name="verify-email">Forgot Password ?</button>
+      <button id="needReg" onclick="changeSignInToUp()">Need to Sign Up?</button>
 
-        <div id="signInDiv">
-          <h4>Sign in</h4>
-          <h5>If you have registered / Signed in not long ago on any of my projects, and you were asked to create account please let me know at artiomasaturov@gmail.com</h5>
-        </div>
-        <div id="inOrOutDiv">          <!-- Sign up menu starts -->
-          <form>
-          <input autocomplete="on" type="text" id="email" name="email" placeholder="Email" />
-          <input autocomplete="on" type="password" id="password" name="password" placeholder="Password" />
-          </form>
-          <button id="sign-up" name="signup">Sign Up</button>
-          <button id="alreadyUser" onclick="changeSignUpToIn()">Already Registered?</button>
-          <button id="sign-in" name="signin">Sign In</button>
-          <button id="password-reset" name="verify-email">Forgot Password ?</button>
-          <button id="needReg" onclick="changeSignInToUp()">Need to Sign Up?</button>
+    </div>
+    </div>
+  </div>  
+</div>          <!-- Background Filter Ends-->
 
-        </div>
-       </div>
-      </div>  
-    </div>          <!-- Background Filter Ends-->
 
-          <div id="user-details-container">
-            <span id="sign-in-status">Signed Out</span>
-            <button id="sign-out" name="signout">Sign out</button>
-            <p id="safeLight">Loading..</p>
-            <p id="safeLightProfit"></p>
-            <p id="safeBTC"></p>
-            <P id="safeBTCProfit">Loading..</P>
-          </div>
-
-  </main> 
+</main> 
 
             <!-- CHANGES BETWEEN LOGIN AND SIGN UP -->  <!-- I WAS WORKING ON DIFFERENCES BETWEEN SIGN UP AND SIGN IN !!! TRY TO FIND A WAY HOW TO REDUCE CODE BELOW !!!-->
 

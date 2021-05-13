@@ -121,6 +121,7 @@ function initApp() {
       document.getElementById("sign-in").textContent = "Sign out";
       document.getElementById("signUpOrIn").style.display = "none";
       document.getElementById("user-details-container").style.display = "block";
+      document.getElementById("backgroundFilter").style.display = "none";
     } 
     else { // "enter" key for sign in / up
       var signIn = document.getElementById("sign-in");
